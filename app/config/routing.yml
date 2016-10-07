@@ -1,0 +1,21 @@
+#app:
+#    resource: "@AppBundle/Controller/"
+#    type:     annotation
+
+blog_list:
+    path: /blog/{page}
+    defaults: { _controller: AppBundle:Blog:list, page: 1 }
+    requirements:
+        page: \d+
+
+blog_show:
+    path: /blog/{slug}
+    defaults: { _controller: AppBundle:Blog:show }
+
+lucky_number:
+    path: /lucky/number/{max}
+    defaults: { _controller: AppBundle:Lucky:randomize, max: 100 }
+
+return_json:
+    path: /json
+    defaults: { _controller: AppBundle:Blog:returnJson }
