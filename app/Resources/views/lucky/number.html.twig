@@ -2,4 +2,10 @@
 
 {% block body %}
     <h1>Your lucky number is: {{ number }}</h1>
+
+    {% for i in 0..5 %}
+        {{ i }}
+        {{ cycle(['jedna', 'dva', 'tri'], i) }}
+    {% endfor %}
 {% endblock %}
+
