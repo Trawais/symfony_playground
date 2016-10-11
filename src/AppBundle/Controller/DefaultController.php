@@ -31,6 +31,14 @@ class DefaultController extends Controller
             ->add('save', SubmitType::class, ['label' => 'crate task'])
             ->getForm();
 
+        $form->handleRequest($request);
+        
+        if ($form->isSubmitted() && $form->isValid()) {
+            return $this->render('default/task.html.twig', [
+                'task' => $form->getData()
+            ]);
+        }
+
         return $this->render('default/task_form.html.twig', [
             'form' => $form->createView()
         ]);
