@@ -2,6 +2,14 @@
 #    resource: "@AppBundle/Controller/"
 #    type:     annotation
 
+homepage:
+    path: /
+    defaults: { _controller: AppBundle:Default:index }
+
+new_form:
+    path: /form
+    defaults: { _controller: AppBundle:Default:new }
+
 blog_list:
     path: /blog/{page}
     defaults: { _controller: AppBundle:Blog:list, page: 1 }
