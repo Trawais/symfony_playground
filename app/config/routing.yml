@@ -19,3 +19,11 @@ lucky_number:
 return_json:
     path: /json
     defaults: { _controller: AppBundle:Blog:returnJson }
+
+create_product:
+    path: /product/create
+    defaults: { _controller: AppBundle:Product:create }
+
+show_product:
+    path: /product/{id}
+    defaults: { _controller: AppBundle:Product:show, id: -1 }

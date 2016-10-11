@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <form action="action_page.php">
+        Name:<br>
+        <input type="text" name="first_name" size="40" readonly value="{{ product.name }}"><br>
+        Price:<br>
+        <input type="text" name="price" size="40" readonly value="{{ product.price }}"><br>
+        Description:<br>
+        <input type="textfield" name="description" size="40" readonly value="{{ product.description }}"><br>
+    </form>
+{% endblock %}
